@@ -10,5 +10,11 @@
     "email": "child_admin@yopmail.com",
     "password": "32456",
     "timestamp": "2024-05-30T11:05:34.585Z"
+  },
+  {
+    "name": "warner",
+    "email": "warner@mail.com",
+    "password": "8773434343434",
+    "timestamp": "2024-05-30T11:21:59.062Z"
   }
 ]

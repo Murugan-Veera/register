@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 
 export default function Home() {
   return (
