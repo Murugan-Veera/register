@@ -22,6 +22,7 @@ export default function Register() {
       },
       body: JSON.stringify(formData),
     });
+    //console.log(response);
     if (response.ok) {
       alert('Registration successful!');
     } else {
