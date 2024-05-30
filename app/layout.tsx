@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-export const runtime = 'edge';
+export const runtime = 'experimental-edge';
 
 const inter = Inter({ subsets: ["latin"] });
 
