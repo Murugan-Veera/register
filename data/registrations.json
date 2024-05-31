@@ -58,5 +58,11 @@
     "email": "child_admin@yopmail.com",
     "password": "23232332323",
     "timestamp": "2024-05-31T04:33:29.553Z"
+  },
+  {
+    "name": "app_admin",
+    "email": "test_admin@yopmail.com",
+    "password": "222222",
+    "timestamp": "2024-05-31T05:49:37.732Z"
   }
 ]
