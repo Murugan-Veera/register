@@ -4,9 +4,7 @@ import "./globals.css";
 
 //export const runtime = 'experimental-edge';
 
-export const config = {
-  runtime: 'nodejs', // specify the runtime
-};
+export const runtime = "nodejs";
 
 
 const inter = Inter({ subsets: ["latin"] });
