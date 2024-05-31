@@ -16,5 +16,23 @@
     "email": "warner@mail.com",
     "password": "8773434343434",
     "timestamp": "2024-05-30T11:21:59.062Z"
+  },
+  {
+    "name": "murugaaaa",
+    "email": "murugan@gmail.com",
+    "password": "2323232323",
+    "timestamp": "2024-05-31T03:55:28.674Z"
+  },
+  {
+    "name": "kumari",
+    "email": "kumari@gmail.com",
+    "password": "6878997979",
+    "timestamp": "2024-05-31T03:56:05.051Z"
+  },
+  {
+    "name": "my new test",
+    "email": "mytester@gmail.com",
+    "password": "123456",
+    "timestamp": "2024-05-31T04:00:18.537Z"
   }
 ]
