@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 //export const runtime = 'experimental-edge';
-export const runtime = 'experimental-edge'?'experimental-edge':'nodejs';
+export const config = {
+  runtime: 'nodejs', // specify the runtime
+};
 
 export default async (req, res) => {
   if (req.method === 'POST') {

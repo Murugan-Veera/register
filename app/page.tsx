@@ -1,7 +1,9 @@
 import Image from "next/image";
 //export const runtime = 'experimental-edge';
-export const runtime = 'experimental-edge'?'experimental-edge':'nodejs';
 
+export const config = {
+  runtime: 'nodejs', // specify the runtime
+};
 
 export default function Home() {
   return (

@@ -3,7 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 //export const runtime = 'experimental-edge';
-export const runtime = 'experimental-edge'?'experimental-edge':'nodejs';
+
+export const config = {
+  runtime: 'nodejs', // specify the runtime
+};
 
 
 const inter = Inter({ subsets: ["latin"] });

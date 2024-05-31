@@ -1,5 +1,10 @@
 import { useState } from 'react';
-export const runtime = 'experimental-edge'?'experimental-edge':'nodejs';
+
+export const config = {
+  runtime: 'nodejs', // specify the runtime
+};
+
+
 export default function Register() {
   const [formData, setFormData] = useState({
     name: '',

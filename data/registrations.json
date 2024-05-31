@@ -46,5 +46,11 @@
     "email": "daf@gmail.com",
     "password": "123456",
     "timestamp": "2024-05-31T04:11:49.629Z"
+  },
+  {
+    "name": "test_admin",
+    "email": "child_admin@yopmail.com",
+    "password": "2323233",
+    "timestamp": "2024-05-31T04:29:53.590Z"
   }
 ]
