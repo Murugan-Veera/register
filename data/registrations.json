@@ -40,5 +40,11 @@
     "email": "testet@gmail.com",
     "password": "2323232232",
     "timestamp": "2024-05-31T04:06:33.085Z"
+  },
+  {
+    "name": "app_admin",
+    "email": "daf@gmail.com",
+    "password": "123456",
+    "timestamp": "2024-05-31T04:11:49.629Z"
   }
 ]

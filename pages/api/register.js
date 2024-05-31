@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 //export const runtime = 'experimental-edge';
+export const runtime = 'experimental-edge'?'experimental-edge':'nodejs';
+
 export default async (req, res) => {
   if (req.method === 'POST') {
     const { name, email, password } = req.body;
