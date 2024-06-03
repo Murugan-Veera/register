@@ -17,7 +17,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to API endpoint (to be created)
-    const response = await fetch('https://worker-nameless-wildflower-3a34.kkdgantester.workers.dev/', {
+    const response = await fetch('https://74626f96.register-backend.pages.dev', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
