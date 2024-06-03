@@ -48,7 +48,7 @@ export default function Register() {
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
 
-        <button type="submit" style={{ marginTop: '20px' }}>Register</button>
+        <button type="submit" style={{ marginTop: '20px' }}>Register Here</button>
       </form>
     </div>
   );
