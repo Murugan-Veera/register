@@ -17,7 +17,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to API endpoint (to be created)
-    const response = await fetch('https://0473bc6f.register-backend.pages.dev/', {
+    const response = await fetch('https://f0182807.register-backend.pages.dev/api/register/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
