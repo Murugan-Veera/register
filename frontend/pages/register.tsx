@@ -1,6 +1,5 @@
+// pages/register.tsx
 import { useState } from 'react';
-export const runtime = 'experimental-edge';
-
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -9,31 +8,29 @@ export default function Register() {
     password: '',
   });
 
-  const handleChange = (e) => {
+  const [message, setMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Send form data to API endpoint (to be created)
-    const response = await fetch('https://worker-nameless-wildflower-3a34.kkdgantester.workers.dev/', {
+    const response = await fetch('https://your-cloudflare-pages-url/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
-  
-  
-    console.log(response);
-    const data = await response.json();
-  if (response.ok) {
-    setMessage(data.message);
-  } else {
-    setMessage('Registration failed: ' + data.message);
-  }
 
+    const data = await response.json();
+    if (response.ok) {
+      setMessage(data.message);
+    } else {
+      setMessage('Registration failed: ' + data.message);
+    }
   };
 
   return (
@@ -50,6 +47,7 @@ export default function Register() {
 
         <button type="submit" style={{ marginTop: '20px' }}>Register</button>
       </form>
+      {message && <p>{message}</p>}
     </div>
   );
 }
