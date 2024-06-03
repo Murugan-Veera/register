@@ -17,19 +17,23 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to API endpoint (to be created)
-    const response = await fetch('/api/register', {
+    const response = await fetch('https://worker-nameless-wildflower-3a34.kkdgantester.workers.dev/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
+  
+  
     //console.log(response);
-    if (response.ok) {
-      alert('Registration successful!');
-    } else {
-      alert('Registration failed!');
-    }
+    const data = await response.json();
+  if (response.ok) {
+    setMessage(data.message);
+  } else {
+    setMessage('Registration failed: ' + data.message);
+  }
+
   };
 
   return (
