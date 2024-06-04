@@ -24,12 +24,11 @@ export default function Register() {
     
   
     try {
-       //const response = await fetch('api/register/', {
-        const response = await fetch('https://f0182807.register-backend.pages.dev/api/register/', {
+      //const response = await fetch('https://f0182807.register-backend.pages.dev/api/register/', {
+        const response = await fetch('api/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify(formData),
       });
@@ -59,7 +58,7 @@ export default function Register() {
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
 
-        <button type="submit" style={{ marginTop: '20px' }}>Register</button>
+        <button type="submit" style={{ marginTop: '20px' }}>Register Here</button>
         {message && <p>{message}</p>}
       </form>
     </div>
