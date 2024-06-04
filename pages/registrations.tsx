@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export default function Registrations() {
   const [registrations, setRegistrations] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchRegistrations = async () => {
@@ -14,6 +15,8 @@ export default function Registrations() {
         setRegistrations(data);
       } catch (error) {
         console.error('Failed to fetch registrations:', error);
+        setError('Failed to fetch registrations. Please try again later.');
+
       }
     };
 
@@ -23,13 +26,17 @@ export default function Registrations() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <h1>Registrations</h1>
-      <ul>
-        {registrations.map((registration, index) => (
-          <li key={index}>
-            <strong>Name:</strong> {registration}, <strong>Email:</strong> {registration}
-          </li>
-        ))}
-      </ul>
+      {error ? (
+        <p>{error}</p>
+      ) : (
+        <ul>
+          {registrations.map((registration, index) => (
+            <li key={index}>
+              <strong>Name:</strong> {registration}, <strong>Email:</strong> {registration}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
