@@ -1,4 +1,4 @@
-name = "my-cloudflare-worker"
+name = "form-data"
 type = "javascript"
 
 kv_namespaces = [
