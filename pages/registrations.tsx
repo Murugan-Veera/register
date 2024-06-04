@@ -7,7 +7,7 @@ export default function Registrations() {
   useEffect(() => {
     const fetchRegistrations = async () => {
       try {
-        const response = await fetch('https://ebe30251.register-backend.pages.dev/api/get-registrations');
+        const response = await fetch('https://1775b6c7.register-backend.pages.dev/api/get-registrations');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
