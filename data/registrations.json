@@ -6,63 +6,27 @@
     "timestamp": "2024-05-30T11:05:09.759Z"
   },
   {
-    "name": "app_admin",
-    "email": "child_admin@yopmail.com",
-    "password": "32456",
-    "timestamp": "2024-05-30T11:05:34.585Z"
+    "name": "test_admin",
+    "email": "dfadf@gmail.com",
+    "password": "2343344sddd",
+    "timestamp": "2024-06-04T06:32:00.690Z"
   },
   {
-    "name": "warner",
-    "email": "warner@mail.com",
-    "password": "8773434343434",
-    "timestamp": "2024-05-30T11:21:59.062Z"
+    "name": "my name is mgn",
+    "email": "mytnage@gmail.com",
+    "password": "sdfdfddfafff1233333",
+    "timestamp": "2024-06-04T06:32:38.017Z"
   },
   {
-    "name": "murugaaaa",
-    "email": "murugan@gmail.com",
-    "password": "2323232323",
-    "timestamp": "2024-05-31T03:55:28.674Z"
+    "name": "sfafdaf",
+    "email": "sdfaf@gmail.com",
+    "password": "1111111111111111",
+    "timestamp": "2024-06-04T06:34:18.098Z"
   },
   {
     "name": "kumari",
     "email": "kumari@gmail.com",
-    "password": "6878997979",
-    "timestamp": "2024-05-31T03:56:05.051Z"
-  },
-  {
-    "name": "my new test",
-    "email": "mytester@gmail.com",
-    "password": "123456",
-    "timestamp": "2024-05-31T04:00:18.537Z"
-  },
-  {
-    "name": "kr0006",
-    "email": "testet@gmail.com",
-    "password": "2323232232",
-    "timestamp": "2024-05-31T04:06:33.085Z"
-  },
-  {
-    "name": "app_admin",
-    "email": "daf@gmail.com",
-    "password": "123456",
-    "timestamp": "2024-05-31T04:11:49.629Z"
-  },
-  {
-    "name": "test_admin",
-    "email": "child_admin@yopmail.com",
-    "password": "2323233",
-    "timestamp": "2024-05-31T04:29:53.590Z"
-  },
-  {
-    "name": "test_admin",
-    "email": "child_admin@yopmail.com",
-    "password": "23232332323",
-    "timestamp": "2024-05-31T04:33:29.553Z"
-  },
-  {
-    "name": "app_admin",
-    "email": "test_admin@yopmail.com",
-    "password": "222222",
-    "timestamp": "2024-05-31T05:49:37.732Z"
+    "password": "kumari123",
+    "timestamp": "2024-06-04T06:37:28.760Z"
   }
 ]

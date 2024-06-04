@@ -9,6 +9,9 @@ export default function Register() {
     password: '',
   });
 
+  const [message, setMessage] = useState('');
+
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -17,22 +20,29 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to API endpoint (to be created)
-    const response = await fetch('https://f0182807.register-backend.pages.dev/api/register/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    //const response = await fetch('https://f0182807.register-backend.pages.dev/api/register/', {
+    
   
-  
-    console.log(response);
-    const data = await response.json();
-  if (response.ok) {
-    setMessage(data.message);
-  } else {
-    setMessage('Registration failed: ' + data.message);
-  }
+    try {
+      //const response = await fetch('https://f0182807.register-backend.pages.dev/api/register/', {
+        const response = await fetch('api/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setMessage(data.message);
+      } else {
+        setMessage('Registration failed: ' + data.message);
+      }
+    } catch (error) {
+      setMessage('An error occurred: ' + error.message);
+    }
+
 
   };
 
@@ -48,7 +58,8 @@ export default function Register() {
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
 
-        <button type="submit" style={{ marginTop: '20px' }}>Register Here</button>
+        <button type="submit" style={{ marginTop: '20px' }}>Register</button>
+        {message && <p>{message}</p>}
       </form>
     </div>
   );
