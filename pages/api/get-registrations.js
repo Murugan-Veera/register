@@ -1,4 +1,8 @@
-export async function onRequest(context) {
+// functions/api/get-registrations.js
+
+export default async function onRequest(context) {
+    
+     
   const { env } = context;
 
   try {
@@ -8,13 +12,23 @@ export async function onRequest(context) {
     const registrations = [];
     for (const key of keys.keys) {
       const value = await env.FORM_DATA.get(key.name);
-      registrations.push(JSON.parse(value));
+      console.log(`Fetched value for key ${key.name}: ${value}`);
+      if (value) {
+        registrations.push(JSON.parse(value));
+      } else {
+        console.error(`No value found for key ${key.name}`);
+      }
     }
 
-    return new Response(JSON.stringify(registrations), {
+    const jsonResponse = JSON.stringify(registrations);
+    console.log(`Final JSON response: ${jsonResponse}`);
+
+    return new Response(jsonResponse, {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
       },
     });
   } catch (error) {
