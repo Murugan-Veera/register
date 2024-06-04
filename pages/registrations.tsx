@@ -5,10 +5,16 @@ export default function Registrations() {
 
   useEffect(() => {
     const fetchRegistrations = async () => {
-      const response = await fetch('https://f0182807.register-backend.pages.dev/api/get-registrations');
-      //const response = await fetch('api/get-registrations/');
-      const data = await response.json();
-      setRegistrations(data);
+      try {
+        const response = await fetch('https://ebe30251.register-backend.pages.dev/api/get-registrations');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setRegistrations(data);
+      } catch (error) {
+        console.error('Failed to fetch registrations:', error);
+      }
     };
 
     fetchRegistrations();
