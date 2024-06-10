@@ -12,19 +12,26 @@
 
 
 export default async function handler(req, res) {
-  // Replace this URL with your Retool API or any other API you're trying to fetch data from
-  const API_URL = 'https://register-git-main-murugan-veeras-projects.vercel.app/api/fetchData';
+  const  RETOOL_API_KEY  = "retool_wk_7b49627308bb4c5a97f63fd4cec27370";
 
-  try {
-    const response = await fetch(API_URL);
-
-    if (!response.ok) {
-      return res.status(response.status).json({ message: 'Failed to fetch data' });
-    }
-
-    const data = await response.json();
-    res.status(200).json(data);
-  } catch (error) {
-    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  if (!RETOOL_API_KEY) {
+    res.status(500).json({ message: 'RETOOL_API_KEY is not set' });
+    return;
   }
+
+  const response = await fetch('https://api.retool.com/v1/workflows/6c5f2d04-a8a7-4547-b3f7-8dcb865e4bf8/startTrigger', {
+    headers: {
+      'Authorization': `Bearer ${RETOOL_API_KEY}`,
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (!response.ok) {
+    res.status(response.status).json({ message: 'Failed to fetch data' });
+    return;
+  }
+
+  const data = await response.json();
+  res.status(200).json(data);
 }
+

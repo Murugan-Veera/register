@@ -6,7 +6,7 @@ export default async function handler(req, res) {
       return;
     }
   
-    const response = await fetch('https://retoolapi.example.com/data', {
+    const response = await fetch('https://email2murugan.retool.com/workflows/5c7a09d4-af1d-4df9-b3ce-4aa928b63251', {
       headers: {
         'Authorization': `Bearer ${RETOOL_API_KEY}`,
         'Content-Type': 'application/json'
