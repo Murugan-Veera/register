@@ -34,5 +34,11 @@
     "email": "etesrs@gmail.com",
     "password": "w3rr343",
     "timestamp": "2024-06-04T10:17:00.811Z"
+  },
+  {
+    "name": "super_admin",
+    "email": "test@gmmil.com",
+    "password": "sfdfdfdafd",
+    "timestamp": "2024-06-10T07:01:10.917Z"
   }
 ]
