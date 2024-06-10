@@ -13,7 +13,7 @@
 // api/getdata.js
 
 export default async function handler(req, res) {
-  const RETOOL_API_URL = 'https://retoolapi.example.com/your-query-endpoint'; // Replace with your actual Retool API endpoint
+  const RETOOL_API_URL = 'https://register-git-main-murugan-veeras-projects.vercel.app/api/fetchData'; // Replace with your actual Retool API endpoint
   const RETOOL_API_KEY = process.env.RETOOL_API_KEY; // Set this in Vercel's environment variables
 
   try {
@@ -21,6 +21,9 @@ export default async function handler(req, res) {
       headers: {
         'Authorization': `Bearer ${RETOOL_API_KEY}`, // If API key is required
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
       },
     });
 
