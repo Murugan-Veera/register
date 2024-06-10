@@ -1,5 +1,5 @@
 export default async function getData() {
-  const response = await fetch('https://register-git-main-murugan-veeras-projects.vercel.app/getdata');
+  const response = await fetch('https://register-git-main-murugan-veeras-projects.vercel.app/api/fetchData');
   if (response.ok) {
     const data = await response.json();
     console.log(data);
