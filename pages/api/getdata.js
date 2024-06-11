@@ -13,13 +13,14 @@
 // api/getdata.js
 
 export default async function handler(req, res) {
-  const RETOOL_API_URL = 'https://register-git-main-murugan-veeras-projects.vercel.app/api/fetchData'; // Replace with your actual Retool API endpoint
-  const RETOOL_API_KEY = process.env.RETOOL_API_KEY; // Set this in Vercel's environment variables
+  const RETOOL_API_URL = 'https://api.retool.com/v1/workflows/6c5f2d04-a8a7-4547-b3f7-8dcb865e4bf8/startTrigger?environment=production'; // Replace with your actual Retool API endpoint
+  const RETOOL_API_KEY = 'retool_wk_7b49627308bb4c5a97f63fd4cec27370'; // Set this in Vercel's environment variables
+//  const RETOOL_API_KEY = "retool_wk_7b49627308bb4c5a97f63fd4cec27370"; // Set this in Vercel's environment variables
 
   try {
-    const response = await fetch(RETOOL_API_URL, {
+    const response = await fetch('https://api.retool.com/v1/workflows/6c5f2d04-a8a7-4547-b3f7-8dcb865e4bf8/startTrigger', {
       headers: {
-        'Authorization': `Bearer ${RETOOL_API_KEY}`, // If API key is required
+        'X-API-Key': 'retool_wk_7b49627308bb4c5a97f63fd4cec27370', // If API key is required
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -27,6 +28,7 @@ export default async function handler(req, res) {
       },
     });
 
+    console.log(response);
     if (!response.ok) {
       return res.status(response.status).json({ message: 'Failed to fetch data' });
     }
