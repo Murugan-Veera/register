@@ -18,15 +18,17 @@ export default async function handler(req, res) {
 //  const RETOOL_API_KEY = "retool_wk_7b49627308bb4c5a97f63fd4cec27370"; // Set this in Vercel's environment variables
 
   try {
-    const response = await fetch('https://api.retool.com/v1/workflows/6c5f2d04-a8a7-4547-b3f7-8dcb865e4bf8/startTrigger', {
+    const response = await fetch('https://api.retool.com/v1/workflows/6c5f2d04-a8a7-4547-b3f7-8dcb865e4bf8/startTrigger?environment=production', {
       headers: {
-        'X-API-Key': 'retool_wk_7b49627308bb4c5a97f63fd4cec27370', // If API key is required
+        'X-Workflow-Api-Key': 'retool_wk_7b49627308bb4c5a97f63fd4cec27370', // If API key is required
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
     });
+
+    //curl -X POST --url "https://api.retool.com/v1/workflows/6c5f2d04-a8a7-4547-b3f7-8dcb865e4bf8/startTrigger" -H 'Content-Type: application/json' -H 'X-Workflow-Api-Key: retool_wk_7b49627308bb4c5a97f63fd4cec27370'
 
     console.log(response);
     if (!response.ok) {
